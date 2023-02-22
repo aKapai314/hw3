@@ -35,4 +35,5 @@ class Or2Gate : public Gate
       Event* update(uint64_t);
 };
 
+//add not gate
 #endif

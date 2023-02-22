@@ -66,8 +66,10 @@ void dealloc(Node* head)
 //   Add any helper functions or
 //   function object struct declarations
 // -----------------------------------------------
-
-
+struct isOdd {
+  //isOdd() : x(val) {}  // Constructor
+  int operator()(int y) const { return y%2 == 0; }
+};
 
 
 
@@ -86,6 +88,22 @@ int main(int argc, char* argv[])
     print(head);
 
     // Test out your linked list code
+    /*
+    Node* smaller;
+    Node* larger;
+    int pivot = 11;
+
+    
+    llpivot(head, smaller, larger, pivot);
+    cout << "Smaller or equal to " << pivot << endl;
+    print(smaller);
+    cout << "Larger than " << pivot << endl;
+    print(larger);
+    */
+
+    isOdd pred; 
+    cout << "The odd numbers in this list are " << endl;
+    print(llfilter(head,pred));
 
 
 

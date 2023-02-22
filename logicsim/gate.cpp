@@ -88,3 +88,5 @@ Event* Or2Gate::update(uint64_t current_time)
 	}
   return e;
 }
+
+//add not gate constructor and update function
